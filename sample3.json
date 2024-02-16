@@ -1,0 +1,43 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "hideColumnHeader": false,
+  "rowFormatter": {
+    "elmType": "div",
+    "attributes": {
+      "class": "sp-card-container"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "sp-card-header"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-title"
+            },
+            "txtContent": "@currentField.Title"
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "sp-card-body"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "txtContent": "@currentField.Description"
+          },
+          {
+            "elmType": "div",
+            "txtContent": "Due Date: @currentField.DueDate"
+          }
+        ]
+      }
+    ]
+  }
+}
