@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "txtContent": "@currentField",
+  "style": {
+    "position": "relative",
+    "display": "inline-block",
+    "cursor": "pointer"
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "style": {
+        "visibility": "hidden",
+        "background-color": "black",
+        "color": "white",
+        "text-align": "center",
+        "border-radius": "6px",
+        "padding": "5px",
+        "position": "absolute",
+        "z-index": "1",
+        "bottom": "100%",
+        "left": "50%",
+        "margin-left": "-50px"
+      },
+      "attributes": {
+        "class": "hover-tooltip"
+      },
+      "txtContent": "=if(indexOf(debugger(prompt('Enter Replacement Text')), 'Enter Replacement Text') == -1, debugger(prompt('Enter Replacement Text')), '')"
+    }
+  ],
+  "customRowAction": {
+    "action": "defaultClick"
+  },
+  "onMouseover": {
+    "hideElement": {
+      "selector": ".hover-tooltip",
+      "display": "visible"
+    }
+  },
+  "onMouseout": {
+    "hideElement": {
+      "selector": ".hover-tooltip",
+      "display": "hidden"
+    }
+  }
+}
