@@ -1,0 +1,98 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "div",
+  "children": [
+    {
+      "elmType": "ul",
+      "style": {
+        "list-style-type": "none",
+        "padding": "0",
+        "margin": "0",
+        "display": "flex"
+      },
+      "children": [
+        {
+          "elmType": "li",
+          "style": {
+            "margin-right": "10px",
+            "cursor": "pointer"
+          },
+          "txtContent": "Tab 1",
+          "attributes": {
+            "class": "=if(index==0, 'selected', '')",
+            "onclick": "=setTab(0)"
+          }
+        },
+        {
+          "elmType": "li",
+          "style": {
+            "margin-right": "10px",
+            "cursor": "pointer"
+          },
+          "txtContent": "Tab 2",
+          "attributes": {
+            "class": "=if(index==1, 'selected', '')",
+            "onclick": "=setTab(1)"
+          }
+        },
+        {
+          "elmType": "li",
+          "style": {
+            "cursor": "pointer"
+          },
+          "txtContent": "Tab 3",
+          "attributes": {
+            "class": "=if(index==2, 'selected', '')",
+            "onclick": "=setTab(2)"
+          }
+        }
+      ]
+    },
+    {
+      "elmType": "div",
+      "style": {
+        "margin-top": "10px",
+        "border": "1px solid #ccc",
+        "padding": "10px",
+        "display": "=if(index==0, 'block', 'none')"
+      },
+      "children": [
+        {
+          "elmType": "p",
+          "txtContent": "Content for Tab 1"
+        }
+      ]
+    },
+    {
+      "elmType": "div",
+      "style": {
+        "margin-top": "10px",
+        "border": "1px solid #ccc",
+        "padding": "10px",
+        "display": "=if(index==1, 'block', 'none')"
+      },
+      "children": [
+        {
+          "elmType": "p",
+          "txtContent": "Content for Tab 2"
+        }
+      ]
+    },
+    {
+      "elmType": "div",
+      "style": {
+        "margin-top": "10px",
+        "border": "1px solid #ccc",
+        "padding": "10px",
+        "display": "=if(index==2, 'block', 'none')"
+      },
+      "children": [
+        {
+          "elmType": "p",
+          "txtContent": "Content for Tab 3"
+        }
+      ]
+    }
+  ],
+  "txtContent": ""
+}
